@@ -4,8 +4,18 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
 #include <string.h>
+
+// macOS compatibility: memalign is not available, use posix_memalign instead
+#ifdef __APPLE__
+static inline void* memalign(size_t alignment, size_t size) {
+    void* ptr = NULL;
+    if (posix_memalign(&ptr, alignment, size) != 0) {
+        return NULL;
+    }
+    return ptr;
+}
+#endif
 
 void set_1d_array(real_t * arr, int length, real_t value, int stride);
 void set_2d_array(real_t arr[LEN_2D][LEN_2D], real_t value, int stride);

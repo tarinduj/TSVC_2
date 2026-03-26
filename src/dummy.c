@@ -1,7 +1,7 @@
 
 #include "common.h"
 
-int dummy(float a[LEN_1D], float b[LEN_1D], float c[LEN_1D], float d[LEN_1D], float e[LEN_1D], float aa[LEN_2D][LEN_2D], float bb[LEN_2D][LEN_2D], float cc[LEN_2D][LEN_2D], float s){
+int dummy(real_t a[LEN_1D], real_t b[LEN_1D], real_t c[LEN_1D], real_t d[LEN_1D], real_t e[LEN_1D], real_t aa[LEN_2D][LEN_2D], real_t bb[LEN_2D][LEN_2D], real_t cc[LEN_2D][LEN_2D], real_t s){
     // --  called in each loop to make all computations appear required
     return 0;
 }
