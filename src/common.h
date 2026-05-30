@@ -37,6 +37,9 @@ typedef int16_t real_t;         // i16  (16-bit)
 #elif defined(USE_INT)
 typedef int real_t;             // i32  (32-bit)
 #define ABS abs
+#elif defined(USE_INT64)
+typedef int64_t real_t;         // i64  (64-bit)
+#define ABS llabs
 #else
 typedef float real_t;           // f32  (32-bit, default)
 #define ABS fabsf
